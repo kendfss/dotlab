@@ -1,0 +1,35 @@
+* {
+    font-family: Consolas;
+    font-style: italic;
+    /* color: mediumseagreen; */
+    /* color: mediumaquamarine; */
+    /* color: mediumturquoise; */
+    
+    /* color: mediumorchid; */
+    /* color: mediumpurple; */
+    /* color: mediumvioletred; */
+    
+    /* color: medium; */
+    color: mediumslateblue;
+}
+*:hover {
+    font-style: normal;
+}
+p:hover {
+    color: wheat;
+}
+html {
+    /* background: #1b1b1b; */
+    background: #ababab;
+}
+canvas {
+    border: 1px dashed black;
+}
+
+p.panelDescription {
+    display: inline;
+    font-size: 12px;
+}
+input[type="button"], input[type="reset"], select {
+    color: mediumorchid;
+}
