@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>pixad</title>        
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <script type="text/javascript" src="./itertools.js"></script>
+        <script type="text/javascript" src="./statistics.js"></script>
+        <script type="text/javascript" src="./maths.js"></script>
+        <script type="text/javascript" src="./colours.js"></script>
+    </head>
+    <body>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <canvas id="sketchpad"></canvas>
+        <div class="panel" id="rendering">
+            <input id="renderingButton" type="button" name="renderingButton" value="Render" onclick="render()"> -
+            <select id="renderingSelector">
+                <option>Canvas</option>
+                <option>Pixels</option>                        
+            </select>
+        </div>
+        <div class="panel" id="tiles">
+            <div id="tileDims">
+                <p class="description">Tile Dimensions</p>
+                <abbr title="Tile Width">
+                    <input type="number" id="tile_width" value="5" min="0" step="1" onchange="canvas.draw()">
+                </abbr>
+                <abbr title="Tile Height">
+                    <input type="number" id="tile_height" value="5" min="0" step="1" onchange="canvas.draw()">
+                </abbr>
+                <input type="reset" id="tileDimReset" onclick="resetTileDim()">
+            </div>
+            <div id="tileSet">
+                <p class="description">Tile Set</p>
+                <abbr title="Number of tiles along X">
+                    <input type="number" id="tilesNX" value="16" min="0" step="1" onchange="canvas.draw()">
+                </abbr>
+                <abbr title="Number of tiles along Y">
+                    <input type="number" id="tilesNY" value="16" min="0" step="1" onchange="canvas.draw()">
+                </abbr>
+                <input type="reset" id="tileSetReset" onclick="resetTileSet()">
+            </div>
+        </div>
+        <div class="panel" id="colour">
+            <input class="colour" id="transparent" type="colour" name="transparent" value="#ffffff">
+            <input class="colour" id="current" type="colour" name="current" value="#000000">
+        </div>
+    </body>
+    <footer>
+        <script type="text/javascript" src="./script.js"></script>
+    </footer>
+</html>
